@@ -1,0 +1,45 @@
+﻿<Window x:Class="KalkulatorKalorii.UserProfile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KalkulatorKalorii"
+        mc:Ignorable="d"
+        Title="UserProfile" Height="400" Width="420" FontSize="14" Background="#FF0488C5">
+    <Border Background="#2e4d5f" CornerRadius="20" Margin=" 20">
+        <Grid>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="First Name:" Foreground="White" FontSize="20"></Label>
+                    <TextBox FontSize="20" Margin="0 5 0 0" x:Name="TextBoxFirstName"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Last Name:" Foreground="White" FontSize="20"></Label>
+                    <TextBox FontSize="20" Margin="0 5 0 0" x:Name="TextBoxLastName"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Male:" Foreground="White" FontSize="20"></Label>
+                    <TextBox FontSize="20" Margin="0 5 0 0" x:Name="TextBoxGender"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="City:" Foreground="White" FontSize="20"></Label>
+                    <TextBox FontSize="20" Margin="0 5 0 0" x:Name="TextBoxCity"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Address:" Foreground="White" FontSize="20"></Label>
+                    <TextBox FontSize="20" Margin="0 5 0 0" x:Name="TextBoxAddress"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Phone:" Foreground="White" FontSize="20"></Label>
+                    <TextBox FontSize="20" Margin="0 5 0 0" x:Name="TextBoxPhone"></TextBox>
+                </StackPanel>
+            </StackPanel>
+            <Button x:Name="returnBtn" Content="Return to menu"  Margin="10,280,231.6,10.4" Background="#545d6a"
+                    Foreground="White" FontSize="17"
+                    Click="BtnReturnMenuProfile" RenderTransformOrigin="0.721,-3.205"/>
+            <Button x:Name="BtnUpdate" Content="Update"  Margin="232,280,9.6,10.4" Background="#545d6a"
+                    Foreground="White" FontSize="17"
+                    Click="btnUpdateUserProfile" RenderTransformOrigin="0.721,-3.205"/>
+        </Grid>
+    </Border>
+</Window>
