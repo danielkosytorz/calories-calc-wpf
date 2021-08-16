@@ -26,12 +26,11 @@ namespace KalkulatorKalorii
         private DataAccess dataAccess;
         private string LoggedUser;
         public string TodayDate;
-        public MainWindow(string user)
+        public MainWindow(string user, string today_date)
         {
             InitializeComponent();
             LoggedUser = user;
-            TextBlockLoggedUser.Text = LoggedUser;
-            TodayDate = DateTime.Now.ToString("yyyy-MM-dd");
+            TodayDate = today_date;
             TextBlockDate.Text = TodayDate;
             FillListBoxesWithFood();
             FillListBoxesWithExercises();
@@ -63,14 +62,14 @@ namespace KalkulatorKalorii
         }
         private void AddFood(object sender, RoutedEventArgs e)
         {
-            Food addFood = new Food(LoggedUser);
+            Food addFood = new Food(LoggedUser, TodayDate);
             addFood.Show();
             this.Close();
         }
 
         private void AddExercise(object sender, RoutedEventArgs e)
         {
-            Exercises addExe = new Exercises(LoggedUser);
+            Exercises addExe = new Exercises(LoggedUser, TodayDate);
             addExe.Show();
             this.Close();
         }
@@ -158,6 +157,40 @@ namespace KalkulatorKalorii
                 calories_burned += item.CaloriesBurned;
 
             TextBlockCaloriesBurnedSummary.Text = calories_burned.ToString();
+        }
+        public void GoToUserProfileButton(object sender, RoutedEventArgs e)
+        {
+            UserProfile userProfile = new UserProfile(LoggedUser, TodayDate);
+            userProfile.Show();
+            this.Close();
+        }
+        public void GoToUserBodyButton(object sender, RoutedEventArgs e)
+        {
+            UserBody userBody = new UserBody(LoggedUser, TodayDate);
+            userBody.Show();
+            this.Close();
+        }
+        public void ChangeDatePlus(object sender, RoutedEventArgs e)
+        {
+            DateTime current_date = Convert.ToDateTime(TodayDate);
+            current_date = current_date.AddTicks(TimeSpan.TicksPerDay);
+            TextBlockDate.Text = current_date.ToString("yyyy-MM-dd");
+            TodayDate = current_date.ToString("yyyy-MM-dd");
+            FillListBoxesWithFood();
+            FillListBoxesWithExercises();
+            CountCaloriesAndMacros();
+            CountBurnedCalories();
+        }
+        public void ChangeDateMinus(object sender, RoutedEventArgs e)
+        {
+            DateTime current_date = Convert.ToDateTime(TodayDate);
+            current_date = current_date - TimeSpan.FromDays(1);
+            TodayDate = current_date.ToString("yyyy-MM-dd");
+            TextBlockDate.Text = current_date.ToString("yyyy-MM-dd");
+            FillListBoxesWithFood();
+            FillListBoxesWithExercises();
+            CountCaloriesAndMacros();
+            CountBurnedCalories();
         }
     }
 }

@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Windows;
+using KalkulatorKalorii.Model;
+using System.Globalization;
 
 namespace KalkulatorKalorii
 {
@@ -436,6 +438,235 @@ namespace KalkulatorKalorii
                 }
                 connection.Close();
             }
+        }
+        public bool CheckIfCanCreateNewUser(string username)
+        {
+            string username_to_check = "###";
+            string QUERY = $"SELECT Login FROM `users` WHERE `Login` Like '{username}';";
+            using (connection = new MySqlConnection(connStrBuilder.ToString()))
+            {
+                MySqlCommand command = new MySqlCommand(QUERY, connection);
+                connection.Open();
+                var dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    if (dataReader.HasRows)
+                    {
+                        while (dataReader.Read())
+                            username_to_check = dataReader["Login"].ToString();
+                    }
+                    else
+                    {
+                        Trace.WriteLine("Brak wyników zapytania");
+                    }
+                }
+                connection.Close();
+                if(username_to_check == "###")
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+        public void SignUpUser(string username, string password, string email)
+        {
+            if (CheckIfCanCreateNewUser(username))
+            {
+                string QUERY = $"INSERT INTO `users`(`UserID`, `Login`, `Password`, `E-mail`)  VALUES (null,'{username}','{password}','{email}')";
+                using (connection = new MySqlConnection(connStrBuilder.ToString()))
+                {
+                    MySqlCommand command = new MySqlCommand(QUERY, connection);
+                    connection.Open();
+                    var dataReader = command.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+
+                    }
+                    connection.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("User with this login already exists.");
+            }
+        }
+        public void CreateUserBodyRow(string logged_user)
+        {
+            int user_id = GetUserIdFromLogin(logged_user);
+            string QUERY = $"INSERT INTO `userbodies` (`UserBodyID`, `UserID`, `Weight`, `Height`, `Bodyfat`, `BMI`) VALUES (NULL, '{user_id}', '', '', '', '');";
+            using (connection = new MySqlConnection(connStrBuilder.ToString()))
+            {
+                MySqlCommand command = new MySqlCommand(QUERY, connection);
+                connection.Open();
+                var dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+
+                }
+                connection.Close();
+            }
+        }
+        public void CreateUserProfileRow(string logged_user)
+        {
+            int user_id = GetUserIdFromLogin(logged_user);
+            string QUERY = $"INSERT INTO `userprofiles` (`UserProfileID`, `UserID`, `FirstName`, `LastName`, `Gender`, `City`, `Address`, `Phone`) VALUES (NULL, '{user_id}', '', '', '', '', '', '');";
+            using (connection = new MySqlConnection(connStrBuilder.ToString()))
+            {
+                MySqlCommand command = new MySqlCommand(QUERY, connection);
+                connection.Open();
+                var dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+
+                }
+                connection.Close();
+            }
+        }
+        public UserProfileModel GetUserProfileData(string logged_user)
+        {
+            UserProfileModel user_profile_model = new UserProfileModel();
+            int user_id = GetUserIdFromLogin(logged_user);
+            string QUERY = $"SELECT * FROM `userprofiles` WHERE `UserID` = {user_id};";
+            using (connection = new MySqlConnection(connStrBuilder.ToString()))
+            {
+                MySqlCommand command = new MySqlCommand(QUERY, connection);
+                connection.Open();
+                var dataReader = command.ExecuteReader();
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        user_profile_model = new UserProfileModel((int)dataReader["UserProfileID"], (int)dataReader["UserID"], dataReader["FirstName"].ToString(), dataReader["LastName"].ToString(), dataReader["Gender"].ToString(), dataReader["City"].ToString(), dataReader["Address"].ToString(), dataReader["Phone"].ToString());
+                    }
+                }
+                else
+                {
+                    Trace.WriteLine("Brak wyników zapytania");
+                }
+            }
+            return user_profile_model;
+
+        }
+        public UserBodyModel GetUserBodyData(string logged_user)
+        {
+            UserBodyModel user_body_model = new UserBodyModel();
+            int user_id = GetUserIdFromLogin(logged_user);
+            string QUERY = $"SELECT * FROM `userbodies` WHERE `UserID` = {user_id};";
+            using (connection = new MySqlConnection(connStrBuilder.ToString()))
+            {
+                MySqlCommand command = new MySqlCommand(QUERY, connection);
+                connection.Open();
+                var dataReader = command.ExecuteReader();
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                        user_body_model = new UserBodyModel((int)dataReader["UserBodyID"], (int)dataReader["UserID"], dataReader["Weight"].ToString(), dataReader["Height"].ToString(), dataReader["Bodyfat"].ToString(), dataReader["BMI"].ToString());
+                }
+                else
+                {
+                    Trace.WriteLine("Brak wyników zapytania");
+                }
+            }
+            return user_body_model;
+        } 
+        public bool CheckIfNeedToCreateUserProfile(string logged_user)
+        {
+            int user_id = GetUserIdFromLogin(logged_user);
+            int user_profile_id = -1;
+            string QUERY = $"SELECT * FROM `userprofiles` WHERE `UserID` = {user_id};";
+            using (connection = new MySqlConnection(connStrBuilder.ToString()))
+            {
+                MySqlCommand command = new MySqlCommand(QUERY, connection);
+                connection.Open();
+                var dataReader = command.ExecuteReader();
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                        user_profile_id = (int)dataReader["UserID"];
+                }
+                else
+                {
+                    Trace.WriteLine("Brak wyników zapytania");
+                }
+                connection.Close();
+                if (user_profile_id == -1)
+                    return true;
+                else
+                    return false;
+            }
+        }
+        public bool CheckIfNeedToCreateUserBody(string logged_user)
+        {
+            int user_id = GetUserIdFromLogin(logged_user);
+            int user_body_id = -1;
+            string QUERY = $"SELECT * FROM `userbodies` WHERE `UserID` = {user_id};";
+            using (connection = new MySqlConnection(connStrBuilder.ToString()))
+            {
+                MySqlCommand command = new MySqlCommand(QUERY, connection);
+                connection.Open();
+                var dataReader = command.ExecuteReader();
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                        user_body_id = (int)dataReader["UserID"];
+                }
+                else
+                {
+                    Trace.WriteLine("Brak wyników zapytania");
+                }
+                connection.Close();
+                if (user_body_id == -1)
+                    return true;
+                else
+                    return false;
+            }
+        }
+        public void UpdateUserProfileRow(string logged_user, string first_name, string last_name, string gender, string city, string address, string phone)
+        {
+            if (CheckIfNeedToCreateUserProfile(logged_user))
+            {
+                CreateUserProfileRow(logged_user);
+            }
+            int user_id = GetUserIdFromLogin(logged_user);
+            string QUERY = $"UPDATE `userprofiles` SET `FirstName` = '{first_name}', `LastName` = '{last_name}', `Gender` = '{gender}', `City` = '{city}', `Address` = '{address}', `Phone` = '{phone}' WHERE `userprofiles`.`UserID` = {user_id};";
+            using (connection = new MySqlConnection(connStrBuilder.ToString()))
+            {
+                MySqlCommand command = new MySqlCommand(QUERY, connection);
+                connection.Open();
+                var dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+
+                }
+                connection.Close();
+            }
+            MessageBox.Show("Data updated");
+            
+            
+        }
+        public void UpdateUserBodyRow(string logged_user, string weight, string height, string bodyfat, string bmi)
+        {
+            if (CheckIfNeedToCreateUserBody(logged_user))
+            {
+                CreateUserBodyRow(logged_user);
+            }
+            int user_id = GetUserIdFromLogin(logged_user);
+            string QUERY = $"UPDATE `userbodies` SET `Weight` = '{weight}', `Height` = '{height}', `Bodyfat` = '{bodyfat}', `BMI` = '{bmi}' WHERE `userbodies`.`UserID` = {user_id};";
+            using (connection = new MySqlConnection(connStrBuilder.ToString()))
+            {
+                MySqlCommand command = new MySqlCommand(QUERY, connection);
+                connection.Open();
+                var dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+
+                }
+                connection.Close();
+            }
+            MessageBox.Show("Data updated");
         }
     }
 }

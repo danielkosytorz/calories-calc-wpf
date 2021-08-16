@@ -20,6 +20,7 @@ namespace KalkulatorKalorii
     public partial class LoginScreen : Window
     {
         private DataAccess dataAccess;
+        public string TodayDate;
         public LoginScreen()
         {
             InitializeComponent();
@@ -28,13 +29,14 @@ namespace KalkulatorKalorii
         private void btnSubmit_Click(object sender, RoutedEventArgs e) // tutaj dodac sprawdzanie użytkoników oraz haseł z bazą danych
         {
             dataAccess = new DataAccess();
+            TodayDate = DateTime.Now.ToString("yyyy-MM-dd");
             string username = txtUsername.Text;
             string passwd = txtPassword.Password;
             UserModel user = dataAccess.LoginUser(username, passwd);
 
             if(user != null)
             {
-                MainWindow dashboard = new MainWindow(user.ToString());
+                MainWindow dashboard = new MainWindow(user.ToString(), TodayDate);
                 dashboard.Show();
                 this.Close();
             } else
@@ -44,7 +46,9 @@ namespace KalkulatorKalorii
         }
         private void btnSignUp_Click(object sender, RoutedEventArgs e)
         {
-            // tu dodać metodę do dodania użytkownika do bazy
+            SignUpScreen signUpScreen = new SignUpScreen();
+            signUpScreen.Show();
+            this.Close();
         }
     }
 }

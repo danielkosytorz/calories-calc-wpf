@@ -76,3 +76,9 @@ C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKal
 C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\MySqlConnector.xml
 C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\SignUpScreen.g.cs
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\SignUpScreen.baml
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\UserBody.g.cs
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\UserProfile.g.cs
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\UserBody.baml
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\UserProfile.baml

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 02 Sie 2021, 05:50
--- Wersja serwera: 10.4.19-MariaDB
--- Wersja PHP: 8.0.7
+-- Czas generowania: 16 Sie 2021, 18:15
+-- Wersja serwera: 10.4.20-MariaDB
+-- Wersja PHP: 8.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Baza danych: `fit_app`
+-- Baza danych: `new_fitapp`
 --
 
 DELIMITER $$
@@ -53,7 +53,12 @@ INSERT INTO `breakfast_to_food` (`UserBreakfastID`, `FoodID`) VALUES
 (0, 4),
 (0, 6),
 (1, 21),
-(1, 2);
+(1, 2),
+(2, 2),
+(4, 6),
+(6, 5),
+(8, 10),
+(9, 2);
 
 -- --------------------------------------------------------
 
@@ -75,7 +80,14 @@ INSERT INTO `dinner_to_food` (`UserDinnerID`, `FoodID`) VALUES
 (0, 60),
 (0, 135),
 (1, 19),
-(1, 332);
+(1, 332),
+(5, 9),
+(2, 11),
+(4, 7),
+(4, 6),
+(6, 9),
+(7, 2),
+(6, 5);
 
 -- --------------------------------------------------------
 
@@ -84,7 +96,7 @@ INSERT INTO `dinner_to_food` (`UserDinnerID`, `FoodID`) VALUES
 --
 
 CREATE TABLE `exercises` (
-  `ExerciseID` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `ExerciseID` int(11) NOT NULL,
   `Name` varchar(100) NOT NULL,
   `CaloriesBurned` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -266,7 +278,7 @@ INSERT INTO `exercises` (`ExerciseID`, `Name`, `CaloriesBurned`) VALUES
 --
 
 CREATE TABLE `food` (
-  `FoodID` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `FoodID` int(11) NOT NULL,
   `Name` varchar(100) NOT NULL,
   `Calories` decimal(10,1) NOT NULL,
   `Protein` decimal(10,1) NOT NULL,
@@ -768,7 +780,11 @@ INSERT INTO `supper_to_food` (`UserSupperID`, `FoodID`) VALUES
 (0, 331),
 (0, 416),
 (1, 433),
-(1, 219);
+(1, 219),
+(2, 23),
+(4, 9),
+(8, 8),
+(9, 6);
 
 -- --------------------------------------------------------
 
@@ -777,7 +793,7 @@ INSERT INTO `supper_to_food` (`UserSupperID`, `FoodID`) VALUES
 --
 
 CREATE TABLE `userbodies` (
-  `UserBodyID` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `UserBodyID` int(11) NOT NULL,
   `UserID` int(11) NOT NULL,
   `Weight` decimal(10,1) NOT NULL,
   `Height` int(11) NOT NULL,
@@ -790,8 +806,9 @@ CREATE TABLE `userbodies` (
 --
 
 INSERT INTO `userbodies` (`UserBodyID`, `UserID`, `Weight`, `Height`, `Bodyfat`, `BMI`) VALUES
-(0, 0, '87.0', 185, '14.0', '25.4'),
-(1, 1, '80.0', 180, '12.0', '24.7');
+(0, 0, '90.0', 185, '12.0', '25.4'),
+(1, 1, '81.0', 181, '12.5', '24.8'),
+(4, 3, '80.0', 180, '12.0', '25.0');
 
 -- --------------------------------------------------------
 
@@ -800,7 +817,7 @@ INSERT INTO `userbodies` (`UserBodyID`, `UserID`, `Weight`, `Height`, `Bodyfat`,
 --
 
 CREATE TABLE `userexercises` (
-  `UserExercisesID` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `UserExercisesID` int(11) NOT NULL,
   `UserID` int(11) NOT NULL,
   `Date` date NOT NULL,
   `TotalCaloriesBurned` int(11) NOT NULL
@@ -812,7 +829,10 @@ CREATE TABLE `userexercises` (
 
 INSERT INTO `userexercises` (`UserExercisesID`, `UserID`, `Date`, `TotalCaloriesBurned`) VALUES
 (0, 0, '2021-07-31', 1500),
-(1, 1, '2021-07-31', 800);
+(1, 1, '2021-07-31', 800),
+(8, 0, '2021-08-14', 0),
+(9, 3, '2021-08-14', 0),
+(10, 1, '2021-08-14', 0);
 
 -- --------------------------------------------------------
 
@@ -832,10 +852,14 @@ CREATE TABLE `userexercisestoexercise` (
 INSERT INTO `userexercisestoexercise` (`UserExercisesID`, `ExerciseID`) VALUES
 (0, 105),
 (0, 108),
-(0, 123),
 (1, 40),
 (1, 60),
-(0, 4);
+(0, 4),
+(1, 105),
+(9, 6),
+(10, 8),
+(9, 122),
+(8, 2);
 
 -- --------------------------------------------------------
 
@@ -844,7 +868,7 @@ INSERT INTO `userexercisestoexercise` (`UserExercisesID`, `ExerciseID`) VALUES
 --
 
 CREATE TABLE `userfood` (
-  `UserFoodID` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `UserFoodID` int(11) NOT NULL,
   `UserID` int(11) NOT NULL,
   `Date` date NOT NULL,
   `TotalCalories` int(11) NOT NULL
@@ -856,7 +880,14 @@ CREATE TABLE `userfood` (
 
 INSERT INTO `userfood` (`UserFoodID`, `UserID`, `Date`, `TotalCalories`) VALUES
 (0, 0, '2021-07-31', 1500),
-(1, 1, '2021-07-31', 900);
+(1, 1, '2021-07-31', 900),
+(2, 1, '2021-08-14', 0),
+(4, 0, '2021-08-14', 0),
+(5, 3, '2021-08-14', 0),
+(6, 0, '2021-08-16', 0),
+(7, 3, '2021-08-16', 0),
+(8, 0, '2021-08-17', 0),
+(9, 0, '2021-08-18', 0);
 
 -- --------------------------------------------------------
 
@@ -865,11 +896,10 @@ INSERT INTO `userfood` (`UserFoodID`, `UserID`, `Date`, `TotalCalories`) VALUES
 --
 
 CREATE TABLE `userprofiles` (
-  `UserProfileID` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `UserProfileID` int(11) NOT NULL,
   `UserID` int(11) NOT NULL,
   `FirstName` varchar(100) NOT NULL,
   `LastName` varchar(100) NOT NULL,
-  `Birthdate` date NOT NULL,
   `Gender` varchar(20) NOT NULL,
   `City` varchar(100) NOT NULL,
   `Address` varchar(100) NOT NULL,
@@ -880,9 +910,11 @@ CREATE TABLE `userprofiles` (
 -- Zrzut danych tabeli `userprofiles`
 --
 
-INSERT INTO `userprofiles` (`UserProfileID`, `UserID`, `FirstName`, `LastName`, `Birthdate`, `Gender`, `City`, `Address`, `Phone`) VALUES
-(0, 0, 'Daniel', 'Kosytorz', '1999-10-05', 'Male', 'Zborowskie', 'ul. Gorna 25', '532107477'),
-(1, 1, 'Pawel', 'Czyz', '1999-08-15', 'Male', 'Gliwice', 'ul. Jakas 15', '784957334');
+INSERT INTO `userprofiles` (`UserProfileID`, `UserID`, `FirstName`, `LastName`, `Gender`, `City`, `Address`, `Phone`) VALUES
+(0, 0, 'Daniel', 'Kosytorz', 'Male', 'Zborowskie', 'ul. Gorna 25', '532107477'),
+(1, 1, 'Pawel', 'Czyz', 'Male', 'Gliwice', 'ul. Jakas 15', '784957334'),
+(3, 2, 'Nowyy', 'nowyy', 'Malee', 'Gliwicee', 'ul. Dluga 6', '123456786'),
+(5, 3, 'Dawid', 'K', 'Male', 'Gliwice', 'ul. jakas 2', '123456789');
 
 -- --------------------------------------------------------
 
@@ -891,7 +923,7 @@ INSERT INTO `userprofiles` (`UserProfileID`, `UserID`, `FirstName`, `LastName`, 
 --
 
 CREATE TABLE `users` (
-  `UserID` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `UserID` int(11) NOT NULL,
   `Login` varchar(100) NOT NULL,
   `Password` varchar(100) NOT NULL,
   `E-mail` varchar(100) NOT NULL
@@ -904,7 +936,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`UserID`, `Login`, `Password`, `E-mail`) VALUES
 (0, 'Daniel', 'pass', 'daniel@mail.com'),
 (1, 'Pawel', 'pass', 'pawel@mail.com'),
-(2, 'nowy', 'pass', 'nowy@pl');
+(2, 'nowy', 'pass', 'nowy@pl'),
+(3, 'Dawid', 'pass3', 'dawid@mail.com');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -924,7 +957,17 @@ ALTER TABLE `dinner_to_food`
   ADD KEY `FoodID` (`FoodID`),
   ADD KEY `dinner_to_food_ibfk_2` (`UserDinnerID`);
 
+--
+-- Indeksy dla tabeli `exercises`
+--
+ALTER TABLE `exercises`
+  ADD PRIMARY KEY (`ExerciseID`);
 
+--
+-- Indeksy dla tabeli `food`
+--
+ALTER TABLE `food`
+  ADD PRIMARY KEY (`FoodID`);
 
 --
 -- Indeksy dla tabeli `supper_to_food`
@@ -937,12 +980,14 @@ ALTER TABLE `supper_to_food`
 -- Indeksy dla tabeli `userbodies`
 --
 ALTER TABLE `userbodies`
+  ADD PRIMARY KEY (`UserBodyID`),
   ADD KEY `UserID` (`UserID`);
 
 --
 -- Indeksy dla tabeli `userexercises`
 --
 ALTER TABLE `userexercises`
+  ADD PRIMARY KEY (`UserExercisesID`),
   ADD KEY `UserID` (`UserID`);
 
 --
@@ -956,14 +1001,69 @@ ALTER TABLE `userexercisestoexercise`
 -- Indeksy dla tabeli `userfood`
 --
 ALTER TABLE `userfood`
+  ADD PRIMARY KEY (`UserFoodID`),
   ADD KEY `UserID` (`UserID`);
 
 --
 -- Indeksy dla tabeli `userprofiles`
 --
 ALTER TABLE `userprofiles`
+  ADD PRIMARY KEY (`UserProfileID`),
   ADD KEY `UserID` (`UserID`);
 
+--
+-- Indeksy dla tabeli `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`UserID`);
+
+--
+-- AUTO_INCREMENT dla zrzuconych tabel
+--
+
+--
+-- AUTO_INCREMENT dla tabeli `exercises`
+--
+ALTER TABLE `exercises`
+  MODIFY `ExerciseID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=164;
+
+--
+-- AUTO_INCREMENT dla tabeli `food`
+--
+ALTER TABLE `food`
+  MODIFY `FoodID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=468;
+
+--
+-- AUTO_INCREMENT dla tabeli `userbodies`
+--
+ALTER TABLE `userbodies`
+  MODIFY `UserBodyID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT dla tabeli `userexercises`
+--
+ALTER TABLE `userexercises`
+  MODIFY `UserExercisesID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT dla tabeli `userfood`
+--
+ALTER TABLE `userfood`
+  MODIFY `UserFoodID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT dla tabeli `userprofiles`
+--
+ALTER TABLE `userprofiles`
+  MODIFY `UserProfileID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT dla tabeli `users`
+--
+ALTER TABLE `users`
+  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- Ograniczenia dla zrzutów tabel
 --
 

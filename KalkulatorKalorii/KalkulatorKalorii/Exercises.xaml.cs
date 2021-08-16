@@ -22,11 +22,11 @@ namespace KalkulatorKalorii
         private DataAccess dataAccess;
         private string LoggedUser;
         public string TodayDate;
-        public Exercises(string user)
+        public Exercises(string user, string today_date)
         {
             InitializeComponent();
             LoggedUser = user;
-            TodayDate = DateTime.Now.ToString("yyyy-MM-dd");
+            TodayDate = today_date;
             ShowExercisesInListbox();
         }
         public void ShowExercisesInListbox()
@@ -45,7 +45,7 @@ namespace KalkulatorKalorii
                 if (questionFood == MessageBoxResult.Yes)
                 {
                     dataAccess.AddExerciseToExerciseDay(selectedExercise.Name, LoggedUser, TodayDate);
-                    MainWindow dashboard = new MainWindow(LoggedUser);
+                    MainWindow dashboard = new MainWindow(LoggedUser, TodayDate);
                     dashboard.Show();
                     this.Close();
                 }
@@ -53,7 +53,7 @@ namespace KalkulatorKalorii
             else
             {
                 MessageBox.Show("You didn't pick any exercise.");
-                MainWindow dashboard = new MainWindow(LoggedUser);
+                MainWindow dashboard = new MainWindow(LoggedUser, TodayDate);
                 dashboard.Show();
                 this.Close();
             }

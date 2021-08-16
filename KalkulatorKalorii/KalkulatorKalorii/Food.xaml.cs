@@ -23,11 +23,11 @@ namespace KalkulatorKalorii
         private DataAccess dataAccess;
         private string LoggedUser;
         public string TodayDate;
-        public Food(string user)
+        public Food(string user, string today_date)
         {
             InitializeComponent();
             LoggedUser = user;
-            TodayDate = DateTime.Now.ToString("yyyy-MM-dd");
+            TodayDate = today_date;
             ShowFoodInListBox();
         }
         public void ShowFoodInListBox()
@@ -71,7 +71,7 @@ namespace KalkulatorKalorii
                 if (foodTimeOption == "None")
                 {
                     MessageBox.Show("You didn't pick any option for time of your food.");
-                    MainWindow dashboard = new MainWindow(LoggedUser);
+                    MainWindow dashboard = new MainWindow(LoggedUser, TodayDate);
                     dashboard.Show();
                     this.Close();
                 }
@@ -80,7 +80,7 @@ namespace KalkulatorKalorii
                     if (questionFood == MessageBoxResult.Yes)
                     {
                         dataAccess.AddFoodToSpecificFoodTime(selectedFood.Name, foodTimeOption, LoggedUser, TodayDate);
-                        MainWindow dashboard = new MainWindow(LoggedUser);
+                        MainWindow dashboard = new MainWindow(LoggedUser, TodayDate);
                         dashboard.Show();
                         this.Close();
                     }
@@ -89,7 +89,7 @@ namespace KalkulatorKalorii
             else
             {
                 MessageBox.Show("You didn't pick any food.");
-                MainWindow dashboard = new MainWindow(LoggedUser);
+                MainWindow dashboard = new MainWindow(LoggedUser, TodayDate);
                 dashboard.Show();
                 this.Close();
             }
