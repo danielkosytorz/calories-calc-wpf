@@ -1,0 +1,144 @@
+﻿<Window x:Class="KalkulatorKalorii.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KalkulatorKalorii"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1024" Background="#FF0488C5" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Border Background="#2e4d5f" CornerRadius="20" Margin="20,20,850,20">
+            <StackPanel Margin="10">
+                <TextBlock Text="Dashboard" TextAlignment="Center" FontSize="26" 
+                               FontWeight="Bold" Foreground="White"/>
+                <Separator></Separator>
+                <Grid Height="40">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="icons8-home-24 (2).png" Width="24" Height="24" Margin="10,0,0,0"></Image>
+                        <Button Content="Main" FontSize="12" 
+                               FontWeight="Bold"  Foreground="White" Width="100" Padding="10,0,0,0" 
+                               Background="{x:Null}" BorderBrush="{x:Null}" HorizontalContentAlignment="Left"/>
+                    </StackPanel>
+                </Grid>
+                <Grid Height="40" VerticalAlignment="Bottom">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="icons8-home-24 (2).png" Width="24" Height="24" Margin="10,0,0,0"></Image>
+                        <Button Content="Logout" FontSize="12" 
+                               FontWeight="Bold"  Foreground="White" Width="100" Padding="10,0,0,0" 
+                               Background="{x:Null}" BorderBrush="{x:Null}" HorizontalContentAlignment="Left"
+                                Click="Button_Click"
+                                />
+                    </StackPanel>
+                </Grid>
+                <Grid Height="40" VerticalAlignment="Bottom">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="" x:Name="TextBlockLoggedUser"></TextBlock>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </Border>
+
+        <Border Background="#2e4d5f" CornerRadius="20" Margin="197,20,10,20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Content="Food" FontSize="40" 
+                       Foreground="White" HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+                       FontWeight="Bold"/>
+                <Label Grid.Column="0" Content="Breakfast" FontSize="20" Margin="83,66,86,386" Grid.RowSpan="2"/>
+                <ListBox Grid.Row="1" Grid.Column="0" Margin="0,34,0,316" x:Name="ListBoxBreakfast"></ListBox>
+                <Label Grid.Column="0" Content="Dinner" FontSize="20" Margin="85,109,84,273" Grid.Row="1"/>
+                <ListBox Grid.Row="1" Grid.Column="0" Margin="0,147,0,203" x:Name="ListBoxDinner"></ListBox>
+                <Label Grid.Column="0" Content="Supper" FontSize="20" Margin="83,222,86,160" Grid.Row="1"/>
+                <ListBox Grid.Row="1" Grid.Column="0" Margin="0,260,0,90" x:Name="ListBoxSupper"></ListBox>
+
+
+                <Label Grid.Row="0" Grid.Column="1" Content="Exercises" FontSize="40" 
+                       Foreground="White" HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+                       FontWeight="Bold"/>
+                <ListBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="5,34,267,273" x:Name="ListBoxExercises"></ListBox>
+
+                <Label Grid.Row="0" Grid.Column="2" Content="Summary" FontSize="40" 
+                       Foreground="White" HorizontalContentAlignment="Stretch" 
+                       VerticalContentAlignment="Stretch" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       FontWeight="Bold"/>
+
+
+
+                <Button Margin="10,350,162,0" Grid.Row="1" Grid.Column="0"
+                        Content="Add Food" FontSize="12" 
+                               FontWeight="Bold"  Foreground="White" Width="100" Padding="10,0,0,0" 
+                               Background="{x:Null}" BorderBrush="{x:Null}" HorizontalContentAlignment="Left"
+                        Click="AddFood"
+                        />
+                <Button Margin="162,350,10,0" Grid.Row="1" Grid.Column="0"
+                        Content="Delete Food" FontSize="12" 
+                               FontWeight="Bold"  Foreground="White" Width="100" Padding="10,0,0,0" 
+                               Background="{x:Null}" BorderBrush="{x:Null}" HorizontalContentAlignment="Left"
+                        Click="DeleteFood" RenderTransformOrigin="0.84,0.471"
+                        />
+
+                <Button Margin="10,350,163,0" Grid.Row="1" Grid.Column="1"
+                        Content="Add Exercise"
+                        FontSize="12" 
+                               FontWeight="Bold"  Foreground="White" Width="100" Padding="10,0,0,0" 
+                               Background="{x:Null}" BorderBrush="{x:Null}" HorizontalContentAlignment="Left"
+                        Click="AddExercise"
+                        />
+                <Button Margin="163,350,10,0" Grid.Row="1" Grid.Column="1"
+                        Content="Delete Exercise"
+                        FontSize="12" 
+                               FontWeight="Bold"  Foreground="White" Width="100" Padding="10,0,0,0" 
+                               Background="{x:Null}" BorderBrush="{x:Null}" HorizontalContentAlignment="Left"
+                        Click="DeleteExercise"
+                        />
+
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Calories: " Foreground="White" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="10 0 0 0"/>
+                            <TextBlock Foreground="White" FontSize="20" x:Name="TextBlockCaloriesSummary" Height="35" Margin="0 0 0 0" Padding="0 3 0 0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Protein: " Foreground="White" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="10 0 0 0"/>
+                            <TextBlock Foreground="White" FontSize="20" x:Name="TextBlockProteinSummary" Height="35" Margin="0 0 0 0" Padding="0 3 0 0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Carbohydrates: " Foreground="White" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="10 0 0 0"/>
+                            <TextBlock Foreground="White" FontSize="20" x:Name="TextBlockCarbohydratesSummary" Height="35" Margin="0 0 0 0" Padding="0 3 0 0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Fat: " Foreground="White" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="10 0 0 0"/>
+                            <TextBlock Foreground="White" FontSize="20" x:Name="TextBlockFatSummary" Height="35" Margin="0 0 0 0" Padding="0 3 0 0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Calories burned: " Foreground="White" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="10,0,0,0"/>
+                            <TextBlock Foreground="White" FontSize="20" x:Name="TextBlockCaloriesBurnedSummary" Height="35" Margin="0 0 0 0" Padding="0 4 0 0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="2" Grid.Column="1">
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="0">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Date: " Foreground="White" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="6,0,0,0"/>
+                        <TextBlock Foreground="White" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="TextBlockDate"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,78 @@
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\KalkulatorKalorii.exe.config
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\KalkulatorKalorii.exe
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\KalkulatorKalorii.pdb
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\KalkulatorKalorii.csprojAssemblyReference.cache
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\LoginScreen.g.cs
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\MainWindow.g.cs
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\App.g.cs
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\KalkulatorKalorii_MarkupCompile.cache
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\KalkulatorKalorii_MarkupCompile.lref
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\LoginScreen.baml
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\MainWindow.baml
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\KalkulatorKalorii.g.resources
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\KalkulatorKalorii.Properties.Resources.resources
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\KalkulatorKalorii.csproj.GenerateResource.cache
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\KalkulatorKalorii.csproj.CoreCompileInputs.cache
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\KalkulatorKalorii.exe
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\KalkulatorKalorii.pdb
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\MaterialDesignColors.dll
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\MaterialDesignThemes.Wpf.dll
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\MaterialDesignColors.pdb
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\MaterialDesignThemes.Wpf.pdb
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\MaterialDesignThemes.Wpf.xml
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\KalkulatorKalorii.csproj.CopyComplete
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\Exercises.g.cs
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\Food.g.cs
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\Exercises.baml
+G:\STUDIA\Semestr IV\Bazy Danych\Projekt\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\Food.baml
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\KalkulatorKalorii.exe.config
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\KalkulatorKalorii.exe
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\KalkulatorKalorii.pdb
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\MaterialDesignColors.dll
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\MaterialDesignColors.pdb
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\Exercises.g.cs
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\Food.g.cs
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\LoginScreen.g.cs
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\MainWindow.g.cs
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\App.g.cs
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\KalkulatorKalorii_MarkupCompile.cache
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\KalkulatorKalorii_MarkupCompile.lref
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\Exercises.baml
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\Food.baml
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\LoginScreen.baml
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\MainWindow.baml
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\KalkulatorKalorii.g.resources
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\KalkulatorKalorii.Properties.Resources.resources
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\KalkulatorKalorii.csproj.GenerateResource.cache
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\KalkulatorKalorii.csproj.CopyComplete
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\KalkulatorKalorii.exe
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\KalkulatorKalorii.pdb
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\KalkulatorKalorii.csproj.AssemblyReference.cache
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\Google.Protobuf.dll
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\System.Buffers.dll
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\System.Memory.dll
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\Zstandard.Net.dll
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\Google.Protobuf.pdb
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\Google.Protobuf.xml
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\System.Buffers.xml
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\System.Memory.xml
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\obj\Debug\KalkulatorKalorii.csproj.CoreCompileInputs.cache
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\MySqlConnector.dll
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\MySqlConnector.xml
+C:\Users\danie\OneDrive\Pulpit\KalkulatorKalorii\KalkulatorKalorii\KalkulatorKalorii\bin\Debug\System.Threading.Tasks.Extensions.xml

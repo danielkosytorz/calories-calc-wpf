@@ -1,0 +1,31 @@
+﻿<Window x:Class="KalkulatorKalorii.Food"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KalkulatorKalorii"
+        mc:Ignorable="d"
+        Title="Food" Height="523.22" Width="400" FontSize="14" Background="#FF0488C5"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Border Background="#2e4d5f" CornerRadius="20" Margin=" 20">
+            <StackPanel Margin="20,20,20,10">
+                <Label Content="Choose your food (100g)" Foreground="White" FontSize="20" HorizontalAlignment="Right" Margin="0,0,53,0"/>
+                <Separator/>
+                <ListBox Height="300" Background="#FF2E4D5F" BorderBrush="{x:Null}" x:Name="ListBoxFood"/>
+                <DockPanel>
+                    <StackPanel>
+                        <RadioButton x:Name="RadioButtonBreakfast" GroupName="FoodTime" Content="Breakfast"/>
+                        <RadioButton x:Name="RadioButtonDinner" GroupName="FoodTime" Content="Dinner"/>
+                        <RadioButton x:Name="RadioButtonSupper" GroupName="FoodTime" Content="Supper"/>
+                    </StackPanel>
+                    <!--<TextBox x:Name="TextBoxAmountOfGram" Width="78" RenderTransformOrigin="1.067,0.513" FontSize="20" VerticalAlignment="Center" TextAlignment="Center" Margin="20 0 0 0">300</TextBox>-->
+                    <!--<Label FontSize="20" RenderTransformOrigin="0.604,1.288" Margin="00 10 0 0">g</Label>-->
+                    <Button x:Name="btnSubmit" Content="Submit" Margin="20 10" HorizontalAlignment="Center" Background="#545d6a"
+                    Foreground="White" FontSize="17"
+                    Click="btnSubmit_Food" RenderTransformOrigin="0.721,-3.205"/>
+                </DockPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

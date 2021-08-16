@@ -1,0 +1,24 @@
+﻿<Window x:Class="KalkulatorKalorii.Exercises"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KalkulatorKalorii"
+        mc:Ignorable="d"
+        Title="Food" Height="500" Width="400" FontSize="14" Background="#FF0488C5"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Border Background="#2e4d5f" CornerRadius="20" Margin=" 20">
+            <StackPanel Margin="20,20,20,10">
+                <Label Content="Choose your exercises" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
+                <Separator></Separator>
+                <ListBox Height="300" Background="#FF2E4D5F" BorderBrush="{x:Null}" x:Name="ListBoxExercises"/>
+                <DockPanel>
+                    <Button Name="btnSubmit" Content="Submit" Margin="20 10" HorizontalAlignment="Center" Background="#545d6a"
+                    Foreground="White" FontSize="17"
+                    Click="btnSubmit_Exercise"/>
+                </DockPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
