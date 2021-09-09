@@ -10,13 +10,13 @@
     <Grid>
         <Border Background="#2e4d5f" CornerRadius="20" Margin=" 20">
             <StackPanel Margin="20,20,20,10">
-                <Label Content="Choose your exercises" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
+                <Label Content="Choose your exercises" Foreground="White" FontSize="25" HorizontalAlignment="Center" FontFamily="WarHeliosCondCBold"/>
                 <Separator></Separator>
-                <ListBox Height="300" Background="#FF2E4D5F" BorderBrush="{x:Null}" x:Name="ListBoxExercises"/>
+                <ListBox Height="300" Background="#FF2E4D5F" BorderBrush="{x:Null}" x:Name="ListBoxExercises" Foreground="White" FontFamily="WarHeliosCondCBold"/>
                 <DockPanel>
                     <Button Name="btnSubmit" Content="Submit" Margin="20 10" HorizontalAlignment="Center" Background="#545d6a"
                     Foreground="White" FontSize="17"
-                    Click="btnSubmit_Exercise"/>
+                    Click="btnSubmit_Exercise" FontFamily="WarHeliosCondCBold"/>
                 </DockPanel>
             </StackPanel>
         </Border>

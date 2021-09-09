@@ -26,10 +26,10 @@ namespace KalkulatorKalorii
             connStrBuilder = new MySqlConnectionStringBuilder();
             //w przykładzie testowym dane zapisane w kodzie w kolejnym projekcie zapiszemy w zasonach aplikacji
             connStrBuilder.UserID = "root";
-            connStrBuilder.Password = "";
+            connStrBuilder.Password = "ZUBm7uTW";
             connStrBuilder.Server = "localhost";
             connStrBuilder.Database = "new_fitapp";
-            connStrBuilder.Port = 3306;
+            connStrBuilder.Port = 8111;
 
             //connection = new MySqlConnection(connStrBuilder.ToString());
         }

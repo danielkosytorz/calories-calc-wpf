@@ -10,14 +10,14 @@
     <Grid>
         <Border Background="#2e4d5f" CornerRadius="20" Margin=" 20">
             <StackPanel Margin="20,20,20,10">
-                <Label Content="Choose your food (100g)" Foreground="White" FontSize="20" HorizontalAlignment="Right" Margin="0,0,53,0"/>
+                <Label Content="Choose your food (100g)" Foreground="White" FontSize="20" HorizontalAlignment="Right" Margin="0,0,53,0" FontFamily="WarHeliosCondCBold"/>
                 <Separator/>
-                <ListBox Height="300" Background="#FF2E4D5F" BorderBrush="{x:Null}" x:Name="ListBoxFood"/>
+                <ListBox Height="300" Background="#FF2E4D5F" BorderBrush="{x:Null}" x:Name="ListBoxFood" Foreground="White" FontFamily="WarHeliosCondCBold"/>
                 <DockPanel>
                     <StackPanel>
-                        <RadioButton x:Name="RadioButtonBreakfast" GroupName="FoodTime" Content="Breakfast"/>
-                        <RadioButton x:Name="RadioButtonDinner" GroupName="FoodTime" Content="Dinner"/>
-                        <RadioButton x:Name="RadioButtonSupper" GroupName="FoodTime" Content="Supper"/>
+                        <RadioButton x:Name="RadioButtonBreakfast" GroupName="FoodTime" Content="Breakfast" FontFamily="WarHeliosCondCBold" Foreground="White" FontSize="16"/>
+                        <RadioButton x:Name="RadioButtonDinner" GroupName="FoodTime" Content="Dinner" Foreground="White" FontFamily="WarHeliosCondCBold" FontSize="16"/>
+                        <RadioButton x:Name="RadioButtonSupper" GroupName="FoodTime" Content="Supper" FontFamily="WarHeliosCondCBold" Foreground="White" FontSize="16"/>
                     </StackPanel>
                     <!--<TextBox x:Name="TextBoxAmountOfGram" Width="78" RenderTransformOrigin="1.067,0.513" FontSize="20" VerticalAlignment="Center" TextAlignment="Center" Margin="20 0 0 0">300</TextBox>-->
                     <!--<Label FontSize="20" RenderTransformOrigin="0.604,1.288" Margin="00 10 0 0">g</Label>-->

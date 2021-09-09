@@ -198,7 +198,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="icons8-home-24 %282%29.png" />
+    <Resource Include="Icons\body_Icon.png" />
+    <Resource Include="Icons\home_Icon.png" />
+    <Resource Include="Icons\logout_Icon.png" />
+    <Resource Include="Icons\profil_Icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets')" />
