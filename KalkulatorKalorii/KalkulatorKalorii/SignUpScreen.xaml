@@ -8,7 +8,7 @@
         Title="SignUp" Height="420" Width="300" FontSize="14" Background="#FF0488C5">
     <Border Background="#2e4d5f" CornerRadius="20" Margin=" 20">
         <StackPanel Margin="20">
-            <Label Content="Login" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
+            <Label Content="Login" Foreground="White" FontSize="25" HorizontalAlignment="Center" FontFamily="WarHeliosCondCBold"/>
             <Separator></Separator>
             <Label Content="Username" Foreground="White"/>
             <TextBox x:Name="txtUsername" Background="#545d6a" Foreground="White" FontSize="18"/>
